@@ -20,8 +20,8 @@ jobs:
 
      - name: Debug Build Output
         run: |
-    ls -l ./build
-    pwd
+          ls -l ./build
+          pwd
 
       - name: Upload application to server
         uses: appleboy/ssh-action@v1.0.3
