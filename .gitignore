@@ -22,5 +22,5 @@ tmp/
 .vscode
 .idea
 
-# .env file
-.env
+# # .env file
+# .env
