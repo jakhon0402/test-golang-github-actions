@@ -6,7 +6,7 @@ all: build
 build:
 	@echo "Building..."
 	
-	@go build -o main cmd/api/main.go
+	@GOOS=linux GOARCH=amd64 go build -o test-actions-app cmd/api/main.go
 
 # Run the application
 run:
