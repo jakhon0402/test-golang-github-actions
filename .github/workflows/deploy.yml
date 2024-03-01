@@ -48,3 +48,4 @@ jobs:
           script: |
             sudo supervisorctl reread
             sudo supervisorctl update
+            sudo supervisorctl restart test-golang-github-actions
