@@ -31,7 +31,7 @@ jobs:
           port: 22
           # script: |
           #   scp -r ./build/test-actions-app ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/root/test-golang-github-actions/
-          source: "test-actions-app,.env"
+          source: "test-actions-app"
           target: "/root/test-golang-github-actions"
           # script: |
           #   mkdir -p /root/test-golang-github-actions
