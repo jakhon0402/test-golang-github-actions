@@ -11,7 +11,7 @@ func (s *FiberServer) RegisterFiberRoutes() {
 
 func (s *FiberServer) HelloWorldHandler(c *fiber.Ctx) error {
 	resp := fiber.Map{
-		"message": "Assalomu alaykum hammaga! Nihfoyat! Ishlarda",
+		"message": "Assalomu alaykum hammaga! Nihfoyat! Uxalayman",
 	}
 
 	return c.JSON(resp)
