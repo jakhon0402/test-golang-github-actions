@@ -33,7 +33,7 @@ jobs:
           #   scp -r ./build/test-actions-app ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/root/test-golang-github-actions/
           # source: "./build/test-actions-app"
           # target: /root/test-golang-github-actions
-          # script: |
+          script: |
             mkdir -p /root/test-golang-github-actions
             cp -r ./build/test-actions-app /root/test-golang-github-actions
 
