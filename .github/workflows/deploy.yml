@@ -29,8 +29,10 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: 22
-          source: "/home/runner/work/test-golang-github-actions/test-golang-github-actions/test-actions-app"
-          target: /root/test-golang-github-actions
+          script: |
+            scp -r ./build/test-actions-app ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/root/test-golang-github-actions/
+          # source: "/home/runner/work/test-golang-github-actions/test-golang-github-actions/test-actions-app"
+          # target: /root/test-golang-github-actions
           # script: |
           #   mkdir -p /root/test-golang-github-actions
           #   cp -r /home/runner/work/test-golang-github-actions/test-golang-github-actions/test-actions-app /root/test-golang-github-actions/
