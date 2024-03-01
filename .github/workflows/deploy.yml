@@ -33,9 +33,9 @@ jobs:
           #   scp -r ./build/test-actions-app ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/root/test-golang-github-actions/
           source: /build/test-actions-app
           target: /root/test-golang-github-actions
-          script: |
-            mkdir -p /root/test-golang-github-actions
-            cp -rv ./build/test-actions-app /root/test-golang-github-actions
+          # script: |
+          #   mkdir -p /root/test-golang-github-actions
+          #   cp -rv ./build/test-actions-app /root/test-golang-github-actions
 
       - name: Reload Supervisor configuration
         uses: appleboy/ssh-action@v1.0.3
