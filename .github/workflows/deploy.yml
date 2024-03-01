@@ -26,8 +26,11 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: 22
-          source: "build/test-actions-app"
-          target: /root/test-golang-github-actions
+          #           source: "build/test-actions-app"
+          # target: /root/test-golang-github-actions
+          script: |
+            mkdir -p /root/test-golang-github-actions
+            cp -r ./build/build/test-actions-app /root/test-golang-github-actions/
 
       - name: Reload Supervisor configuration
         uses: appleboy/ssh-action@v1.0.3
