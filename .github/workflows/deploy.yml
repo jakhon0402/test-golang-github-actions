@@ -18,6 +18,9 @@ jobs:
       - name: Build the Go app
         run: make build
 
+      - name: Log build directory
+        run: echo "Build directory: $(pwd)/build"
+
       - name: Upload application to server
         uses: appleboy/ssh-action@v1.0.3
         with:
