@@ -18,10 +18,8 @@ jobs:
       - name: Build the Go app
         run: make build
 
-     - name: Debug Build Output
-        run: |
-          ls -l ./build
-          pwd
+      - name: Debug Build Output
+        run: ls -l ./build
 
       - name: Upload application to server
         uses: appleboy/ssh-action@v1.0.3
